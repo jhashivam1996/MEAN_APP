@@ -1,0 +1,22 @@
+ 
+<div id="sidebar" >
+    <div class=" toggle-btn " onclick="toggleMenu()">
+     
+    </div>
+    <ul>
+      <li><a routerLink="/#">{{admin.firstname}} {{admin.lastname}}</a></li>
+      <li><a routerLink="/admin/deletedoctor">Remove Doctor</a></li>
+      <li><a  routerLink="/admin/deletepatient">Remove Patient</a></li>
+      <li><a  routerLink="/doctor/update">Update Doctor Info</a></li>
+      <li><a  routerLink="/doctor/update">Update patient Info</a></li>
+      <li><a routerLink="/#">Make Anouncement</a></li>
+      <li><a routerLink="/#">send Message</a></li>
+      <li><a (click)="logout()" routerLink="/login">LogOut</a></li>
+    </ul>
+  </div>
+  <h1 style="text-align: center">Welcome {{admin.firstname}}</h1>
+  <h5 style="text-align: center">You are the admin of this website.</h5>
+ 
+ 
+  <div id="frame"><router-outlet></router-outlet></div>
+  

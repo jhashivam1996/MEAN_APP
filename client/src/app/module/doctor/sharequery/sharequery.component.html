@@ -1,0 +1,29 @@
+
+<div class="container">
+<div class="jumbotron">
+ 
+  <hr>
+<form  #value="ngForm" (submit)="sendquery(value)" >
+  <div  class="form-groups">
+        <p><b>From:</b> Dr. {{user.firstname}} {{user.lastname}}</p> 
+        
+      </div>
+
+ <div  class="form-groups">
+    
+  <p><b>To: </b> <select [(ngModel)]="to" name="to" class="form-control" style="width: 200px"  ng-options="option.to for option in formData.availableOptions track by option.id">
+     <option>--Select--</option>
+    <option *ngFor="let detail of details"  value="{{detail._id}}">Dr. {{detail.firstname}} {{detail.lastname}}</option>
+   </select></p>
+ </div>
+
+ <div id="textbox" class="form-groups">
+   <label  class="abc" >Query:</label>
+   <textarea  [(ngModel)]="queries" name="queries" class="form-control" placeholder="Write your Queries here."></textarea>
+</div>
+<div>
+  <input type="submit" style="margin: 50px 0px; float: right;" class="btn btn-primary" value="Share">
+</div></form>
+</div>
+</div>
+  

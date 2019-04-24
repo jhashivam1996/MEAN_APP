@@ -1,0 +1,43 @@
+
+
+
+ #sidebar {
+    position: fixed;
+    width:250px;
+    height:700px;
+    background:whitesmoke;
+   
+     margin: 0px 20px;
+    transition: all 500ms linear;
+     }
+     #sidebar.active{
+      left:0px;
+     }
+     
+     #sidebar ul li {
+         color:rgb(230, 230, 230);
+        
+         list-style:none;
+         text-decoration: none;
+         padding:15px 10px;
+         border:1px solid rgba(100, 100, 100, 0.308);
+         border-collapse: collapse;
+     }
+    
+     #sidebar .toggle-btn{
+         position: absolute;
+         left:252px;
+         top:0px;
+     }
+     #sidebar .toggle-btn span{
+         display:block;
+         width:30px;
+         height:5px;
+         background: white;
+         margin:5px 0px;
+     }
+     #frame{
+         margin:50px 375px;
+     }
+
+    

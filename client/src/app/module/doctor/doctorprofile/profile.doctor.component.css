@@ -1,0 +1,68 @@
+ 
+
+.container {
+    height:100%;
+align-self: center;
+margin-top:50px;
+
+  width:100%;
+    height:100%;
+     
+}
+ 
+.form-group{
+    font-family: arial, sans-serif;  
+ margin:20px 15px;
+ 
+}
+ .form-control{
+     width: 350px;
+     
+ }
+  
+ .alert{
+     color:rgb(226, 37, 37);
+     margin: 2px 20px;
+ }
+ 
+ #firstcol{
+     height: 100%;
+    margin-left: 0px;
+    
+   
+ }
+ #seccol{
+     margin: -570px  480px;
+        
+ }
+ 
+  #third{
+    margin:0px -500px;
+    margin-top:100px;
+  }
+  #descrip{
+      width: 988px;     
+      margin-left: 18px;
+      margin-top: 50px;
+      
+  }
+  textarea{
+        height: 100px;
+        width: 825px;
+        margin-left: 20px;
+         
+  }
+   
+.jumbotron{
+    height:1200px;
+    background-color:#fff;;
+    color: black;
+}
+ 
+  
+li,button{
+    float:right;
+    margin: 600px 5px;
+     
+   }
+ 

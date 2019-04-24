@@ -1,0 +1,21 @@
+
+<div id="sidebar" >
+  <div class=" toggle-btn " onclick="toggleMenu()">
+   
+  </div>
+  <ul>
+    <li style="background: #fff"><a routerLink="/doctor/profile"> <img class="card-img-bottom" src="assets/images/Blank_Avatar.png" alt="Card image" style="width:50px"> Dr {{detail.firstname}} {{detail.lastname}}</a></li>
+    <li><a routerLink="/patient/registration">New Patient</a></li>
+    <li><a routerLink="/doctor/display">Patient Request </a></li>
+    <li><a routerLink="/doctor/sharequery">Share Query</a></li>
+    <li><a routerLink="/doctor/response"> Response</a></li>
+     <li><a routerLink="/doctor/recievedquery">Recieved Queries</a></li>
+     <li><a routerLink="/doctor/update">Change Password</a></li>
+    <li><a routerLink="/#">Message Admin</a></li>
+     
+    <li><a (click)="logout()" routerLink="/login"> <i class="fa fa-sign-out fa-2x"></i>LogOut</a></li>
+  </ul>
+</div>
+<h3 style="text-align: center;margin-left: 200px;"></h3>
+<hr>
+<div id="frame"><router-outlet></router-outlet></div>

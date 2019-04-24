@@ -1,0 +1,59 @@
+.container {
+    height:100%;
+align-self: center;
+margin-top:20px;
+
+ 
+}
+ 
+.form-group{
+    font-family: arial, sans-serif;  
+ margin:20px 15px;
+ 
+}
+ .form-control{
+     width: 400px;
+ }
+  
+ .alert{
+     color:rgb(226, 37, 37);
+     margin: 2px 20px;
+ }
+ 
+ #firstcol{
+     height: 100%;
+    margin-left: 0px;
+    
+   
+ }
+ #seccol{
+     margin: -635px  590px;
+        
+ }
+ 
+  #third{
+    margin:0px -500px;
+    margin-top:100px;
+  }
+  #descrip,textarea {
+      width: 988px;     
+      margin-left:-90px;
+  }
+  textarea{
+        height: 100px;
+         
+  }
+   
+.jumbotron{
+    height:1050px;
+    background-color :#fff;
+    color: black;
+}
+ 
+  
+li,a,button{
+    float:left;
+    margin: 0px 0px;
+     
+   }
+ 

@@ -1,0 +1,26 @@
+p{
+    float: right;
+    margin:0px 10px;
+}
+table{
+margin-left: 20px;
+}
+table,th,td{
+ grid-auto-columns: 0%;
+ background: #fff;
+ border: 1px solid black;
+ 
+}
+table.row{
+    table-layout:fixed;
+}
+
+ h4{
+     display: inline;
+ }
+
+ .jumbotron{
+     background: #fff;
+     
+ }
+  

@@ -1,0 +1,59 @@
+ <div  *ngIf="details.length!=0"> 
+   <table *ngIf="details.length!=1" class="table" class="row">
+     <thead>
+     <tr style="height: 50px;">
+       <th class="col-sm-4">From</th>
+       <th class="col-sm-4">Date</th>
+       <th class="col-sm-4">Query</th>
+       <th class="col-sm-4">View</th>
+       <th class="col-sm-4">Delete</th>
+     </tr><p></p></thead>
+     
+   </table>
+   <div *ngFor="let detail of details"> 
+     <table *ngIf="details.length!=1" class="table" class="row">
+       <thead>
+       <tr>
+         <td class="col-sm-4">{{detail.from}}</td>
+         <td class="col-sm-4">{{detail.date}}</td>
+         <td  class="col-sm-4">{{detail.queries}}</td>
+           <td  > <p class="btn btn primary"   (click)="fetchOne(detail._id)"><i class="fa fa-eye" aria-hidden="true"></i></p></td>
+           <td   style="width:80px;"> <p (click) = "deletedetails(detail._id)"><a routerLink="/#"> <i style="margin-left: 30px;"  class="material-icons">&#xe16c;</i></a></p></td>
+          </tr>
+      
+      </thead>
+     
+
+     </table> 
+     
+     
+      <div *ngIf="details.length==1" style="width:1070px;height: 100%;" class="container">
+        <div  class="jumbotron"> 
+       <h3 style="text-align: center;margin-top: -20px">Prescription Request</h3>
+       <hr>
+         <h5 style="margin-top: 50px;"><b>Date:</b> {{detail.date}}</h5>
+         <h4 ><b>To:</b> Dr. {{detail.from}} </h4>
+         
+         <h4  style="float: right;"><b>From:</b> Dr. {{user.firstname}} {{user.lastname}} </h4>
+         
+        <form #res="ngForm" style="margin-top: 20px" >
+          <div class="form-group">
+            
+            <label>Refered Query:</label>
+            <textarea  type="text" class="form-control" disabled> {{detail.queries}}</textarea>
+            <label style="margin-top: 20px">Prescription:</label>
+        <textarea  [(ngModel)]="prescription" name="prescription" style="height:100px;" type="text" class="form-control" placeholder="Write the required prescription here."></textarea>
+          </div>  
+          <button class="btn btn primary" style="background: navy;color: white;" (click)="sendprescription(detail.fromid,detail.queries)"  (click)="ngOnInit()">Prescribe</button>
+          <button class="btn btn primary" (click)="ngOnInit()">Cancel</button>
+        
+        </form>
+        
+         </div>
+ </div>
+ </div>
+</div>
+  
+<div  style="text-align:center" *ngIf="details.length==0" class="jumbotron">
+    <h4  > No any recieved queries yet.</h4>
+  </div>

@@ -1,0 +1,52 @@
+<div style="padding: 2px;background: #ffff" >
+    <ul>
+    <a href="/">  <img src="assets/images/MyHealthRecord.png" style="max-height:70px;margin-left:0px;"></a>
+      
+      <li  style="float:right"><img src="assets/images/india1.png" style="max-height:75px;"></li>
+      <li style="float:right"><img src="assets/images/digital_india_logo.png" style="max-height:75px;"></li>
+    </ul>
+  </div>
+  
+<div class="container" >
+  <div class="jumbotron" > 
+     <h4 style="margin-left:10px">Sign in to your account,</h4>
+     
+
+    <hr> 
+    <form #res="ngForm" (submit)="login(res)" class="row"  class="col-sm-6">
+   <div  class = "form-groups"> 
+      
+        <select  [(ngModel)]="key"  name="key"    class="form-control"   type="text"  ng-options="option.key for option in formData.availableOptions track by option.id">
+          <option value="patient">Patient</option>
+           <option value="doctor">Doctor</option>
+           <option value="admin">Admin</option>
+     </select>
+    
+    </div>
+        <div class = "form-groups">   
+          <label>Email ID:</label>  
+          <input type ="text" [(ngModel)] = "email" name = "email" class = "form-control" placeholder ="Enter Email ID" required>
+        </div>
+     <div class = "form-groups">
+          <label>Password:</label>
+          <input type ="password" [(ngModel)] = "password" name = "password" class = "form-control" placeholder ="Enter password" required>
+        </div>
+     
+
+    
+     
+        <div   id="login">
+        <ul style="margin:30px 0px;">
+          <li>SignUp as:
+           <a style="color:rgb(20, 20, 112)"  href="doctor/register">Doctor</a> |
+           <a style="color:rgb(20, 20, 112)"  href="patient/registration">Patient</a>
+            <a  > <input type= "submit"   value = "Submit" class = "btn btn-primary" style="background-color:navy;margin-left: 180px;"> </a>
+            <i *ngIf="loading==true" class="fa fa-spinner fa-pulse"></i>
+          </li>
+        </ul>   
+      
+    </div>
+    </form>
+    </div> 
+    </div>
+   

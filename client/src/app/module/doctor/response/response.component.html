@@ -1,0 +1,58 @@
+<div *ngIf="details.length!=0"> 
+  <table *ngIf="details.length!=1" class="table" class="row">
+    <thead>
+    <tr style="height: 50px;">
+      <th class="col-sm-4">From</th>
+      <th class="col-sm-4">Date</th>
+      <th style="width:80px;" class="col-sm-4">View</th>
+      <th style="width:80px;" class="col-sm-4">Delete</th>
+      
+    </tr></thead>
+  </table>
+  <div *ngFor="let detail of details"> 
+    <table *ngIf="details.length!=1"   class="row">
+      <thead>
+      <tr>
+        <td class="col-sm-4">{{detail.from}}</td>
+        <td class="col-sm-4">{{detail.date}}</td>
+         
+          <td style="width:80px;" > <p class="btn btn primary"   (click)="fetchOne(detail._id)"><i class="fa fa-eye" aria-hidden="true"></i></p>
+          </td>
+          <td style="width:80px;"> <p (click) = "deletedetails(detail._id)"><a routerLink="/#"> <i style="margin-left: 30px;"  class="material-icons">&#xe16c;</i></a></p></td>
+          </tr>
+     
+     </thead>
+    
+
+    </table> 
+    
+    
+    
+     <div *ngIf="details.length==1" style="width:1070px;height: 100%;" class="container">
+       <div  class="jumbotron"> 
+      <h3 style="text-align: center;margin-top: -20px">Prescription Response</h3>
+      <hr>
+      <h4 style="margin-top: 50px;" ><b>Date:</b>  {{detail.date}} </h4>
+        <h4  ><b>From:</b> Dr. {{user.firstname}} {{user.lastname}} </h4>
+        
+       <form #res="ngForm" style="margin-top: 20px" >
+         <div class="form-group">
+           
+           <label>Your Query:</label>
+           <textarea  type="text" class="form-control" disabled> {{detail.queries}}</textarea>
+           <label style="margin-top: 20px">Prescription:</label>
+       <textarea   style="height:100px;" type="text" class="form-control" disabled>{{detail.prescription}}</textarea>
+         </div>  
+         
+         <button class="btn btn primary" (click)="ngOnInit()">Close</button>
+       
+       </form>
+       
+        </div>
+</div>
+</div>
+</div>
+ 
+<div class="jumbotron" *ngIf="details.length==0">
+    <h4 style="text-align: center">No any response yet.</h4>
+  </div>

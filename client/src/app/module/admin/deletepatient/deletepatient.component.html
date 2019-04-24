@@ -1,0 +1,47 @@
+<div class = "container1">
+    
+  <table   *ngIf="details.length!=1" class="table ">
+    <thead>
+  <tr>
+   <th>Patient Name</th>
+   <th>Mobile Number</th>
+   <th>Registration ID</th>
+   
+    </tr></thead> 
+  </table>
+   <div *ngFor = "let detail  of details index as i">
+     <p>  </p>
+  <table  *ngIf="details.length!=1" >
+    <tbody>
+  <tr>   
+      <td> {{detail.firstname}} {{detail.lastname}}</td>
+      <td>{{detail.mob_no}}</td>
+      <td>{{detail._id}}</td>
+     <p (click) = "findOne(detail._id)"><a  routerLink="/#">View</a></p>
+   <p (click) = "deletedetails(detail._id)"><a routerLink="/#">X</a></p>
+   
+   
+    </tr> </tbody>
+  </table>
+  
+  <div *ngIf="details.length==1" id="info">  
+     
+        <button style="margin:5px 635px" class="btn btn-primary" (click)="ngOnInit()">Back</button>
+   <h2 style="text-align: center; margin: -20px 0px;">Patient Information</h2>
+    <div style="margin:40px 50px">
+  <p><b>Name:</b> {{detail.firstname}} {{detail.lastname}}</p>
+  <p><b>Moble Number:</b> {{detail.mob_no}}</p>
+  <p><b>Email:</b> {{detail.email}}</p>
+   <p><b>Gender:</b> {{detail.gender}}</p> 
+  <p><b>City:</b> {{detail.city}}</p>
+  <p><b>Registration ID:</b> {{detail._id}}</p>
+  <p><b>Adhar Number:</b> {{detail.adhar_no}}</p> 
+  <p><b>Description:</b> {{detail.description}}</p>
+  
+</div>
+ </div></div>
+ 
+  </div>
+  
+
+  

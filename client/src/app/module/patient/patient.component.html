@@ -1,0 +1,18 @@
+
+<div id="sidebar" >
+    <div class=" toggle-btn " onclick="toggleMenu()">
+     
+    </div>
+    <ul>
+      <li><a routerLink="/patient/profile"><img class="card-img-bottom" src="assets/images/Blank_Avatar.png" alt="Card image" style="width:50px">  {{detail.firstname}} {{detail.lastname}}</a></li>
+      <li><a routerLink="/#">Take appointment</a></li>
+      <li><a routerLink="/#">Doctor Response</a></li>
+      <li><a routerLink="/#">Contact Doctor</a></li>
+      <li><a  (click)="logout()" routerLink="/login">LogOut</a></li>
+    </ul>
+  </div>
+  <h1 style="text-align: center">Welcome {{detail.firstname}}</h1>
+  
+  <div id="frame"><router-outlet></router-outlet></div>
+  
+ 

@@ -1,0 +1,17 @@
+button{
+    float: right;
+}
+
+.jumbotron{
+    background: #fff;
+}
+table.row{
+    table-layout: fixed;
+    width: 1000px;
+    margin-left: 50px;
+  
+}
+table,th,td{
+      border:1px solid blue ;
+      background: #fff
+}

@@ -1,0 +1,40 @@
+
+ #sidebar {
+    position: fixed;
+    width:250px;
+    height:700px;
+    background:rgba(255, 255, 255, 0.767);
+     margin: 0px 0px;
+    transition: all 500ms linear;
+     }
+     #sidebar.active{
+      left:0px;
+     }
+    
+     #sidebar ul li{
+         list-style:none;
+         background: #fff;
+         padding:15px 10px;
+         border:1px solid rgba(160, 157, 187, 0.432);
+     }
+     a{
+         color:rgb(105, 88, 202);
+     }
+    
+     #sidebar .toggle-btn{
+         position: absolute;
+         left:252px;
+         top:0px;
+     }
+     #sidebar .toggle-btn span{
+         display:block;
+         width:30px;
+         height:5px;
+         background: white;
+         margin:5px 0px;
+     }
+     #frame{
+         margin:50px 270px;
+         width: 1070px;
+         
+     }

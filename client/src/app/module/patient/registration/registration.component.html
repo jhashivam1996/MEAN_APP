@@ -1,0 +1,134 @@
+ <!--step 19 add contact in html,ng model is used for 2 way data binding whatever changes we are doing should be reflected in contactlist-->
+
+
+  
+    <div class = "container" >
+      <div class="jumbotron"  >   
+          <h3 style="text-align:center; color:rgb(35, 172, 35)">PATIENT INFORMATION</h3>
+        <form  (ngSubmit)="onupload()" class="row">
+         
+
+          <div id="firstcol"    class="col-sm-6" >
+
+              <div class = "form-group" >
+                  <label>First Name:</label>
+                  <input type ="text"  [(ngModel)] = "firstname" name = "firstname"  pattern="[a-zA-Z ][a-zA-Z ]+"  class = "form-control"  placeholder ="Enter First Name" required >
+                   
+                </div>
+
+                <div class = "form-group">
+                    <label>Last Name:</label>
+                    <input type ="text"  [(ngModel)] = "lastname" name = "lastname" pattern="[a-zA-Z ][a-zA-Z ]+"  class = "form-control" required placeholder ="Enter Last Name" >
+                   
+                  </div>
+    
+                    <div class = "form-group">
+                        <label>Mobile No:</label>
+                        <input type ="text" [(ngModel)] = "mob_no" name = "mob_no" pattern="[0-9]*" class = "form-control" required  placeholder ="Enter Mobile Number" minlength="10" maxlength="13">
+                      </div>
+    
+              <div class = "form-group">
+                  <label>Email ID:</label>
+                  <input type ="email" [(ngModel)] = "email" name = "email" class = "form-control"required placeholder ="Enter Email ID"  >
+                </div>
+    
+                <div class = "form-group">
+                    <label>Password:</label>
+                    <input type ="password"  [(ngModel)] = "password" name = "password" class = "form-control" required placeholder ="Enter password" minlength="6" maxlength="10">
+                       
+                  </div>
+                  <div class = "form-group">
+                      <label>Confirm Password:</label>
+                      <input type ="password"   [(ngModel)] = "password1"   name = "password1" class = "form-control" required placeholder ="Re-Enter password" minlength="6" maxlength="10">
+                       
+                    </div>
+    
+                   
+            </div>
+        
+            
+    
+     <div  id="seccol" class="col" class="col-sm-6">
+        <div class="form-group">
+            <label>Gender:</label>
+            
+                <select   [(ngModel)] = "gender"  name="gender" class="form-control"   ng-options="option.gender for option in formData.availableOptions track by option.id">
+                    <option value="">--- select---</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+               
+                  </select>
+          </div>
+        
+          <div class="form-group">
+              
+                <label>DOB:</label>
+                <input type="date" class="form-control" id="my-date-picker" placeholder="dd-mm-yyyy"    name="mydate"  
+                [(ngModel)]="model"   required>
+
+            </div>
+              
+            <div class = "form-group">
+                <label>Aadhar Number:</label>
+                <input type ="text" [(ngModel)] = "adhar_no" name = "adhar_no" minlength="12" maxlength="12" class = "form-control" required placeholder ="Enter 12-digit Adhar Number">
+              </div>
+            
+            
+    
+          
+    
+      <div class = "form-group">
+          <label>City:</label>
+          <input type ="text" [(ngModel)] = "city" name = "city" class = "form-control" required placeholder ="Enter Your City address">
+        </div>
+
+       <div class = "form-group">
+                        <label>Request Hospital:</label>
+                        <select  [(ngModel)] = "hospital" name="hospital"    class="form-control"   ng-options="option.hospital for option in formData.availableOptions track by option.id">
+                            <option value="">--- select---</option>
+                            <option value="Hospital-1">Hospital-1</option>
+                            <option value="Hospital-2">Hospital-2</option>
+                            <option value="Hospital-3">Hospital-3</option>
+                            <option value="Hospital-4">Hospital-4</option>
+                            <option value="Hospital-5">Hospital-5</option>
+                          </select>
+                      </div>
+
+
+                    <div class="form-group">
+                          <label>Patient Image:</label>  
+                     <input type="file" class="form-control" (change)=isselected($event)>
+                       </div>
+       
+     </div>
+
+           <div id="third"  class="col-sm-12">
+          <div  class = "form-group" >
+             <label id="descrip">Description:</label>
+                   <textarea  type ="text" [(ngModel)] = "description" name = "description"    placeholder ="Enter Brief Description about your disease.(Hint:- Since howmany days you are suffuring and your current condition.)"></textarea>
+          </div>
+        </div>
+             
+        <div   class="form-group">
+
+             
+            <button   class = "btn btn btn-sucess"    style="color:white;margin:-50px 270px;background-color:navy;"> Submit </button>
+            <button   class = "btn btn btn-cancel"   style="margin:-50px 175px;background-color:rgba(58, 141, 68, 0.301);"><a href="/login">Cancel</a></button>
+         
+          </div>
+          </form>
+       </div>
+  </div>
+      
+ 
+    
+     
+     
+    
+     
+     
+     
+    
+
+    

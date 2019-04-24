@@ -1,0 +1,33 @@
+table ,td, th{
+    
+    font-family: arial, sans-serif;  
+    width:900px;
+    padding: 5px;
+    margin-left: -50px;
+     
+   }
+
+   
+   td{
+       
+         
+       background-color:rgb(129, 156, 160);
+       color: black;
+       padding: 8px;
+      
+   }
+   
+   .container1{
+       margin:0px 50px;
+   }
+
+   #info{
+       margin:50px;
+       width:700px;
+       background-color:whitesmoke;
+       height: 100%;
+   }
+    
+
+
+  
